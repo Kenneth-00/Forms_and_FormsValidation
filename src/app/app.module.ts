@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { FormfieldComponent } from './formfield/formfield.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -12,7 +14,7 @@ const routes: Routes = [
   },
   {
     path:"",
-    redirectTo: "FormField",
+    redirectTo: "formfield",
     pathMatch:"full"
   },
 ]
@@ -23,10 +25,12 @@ const routes: Routes = [
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     RouterModule.forRoot(
       routes
     ),
     RouterModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
