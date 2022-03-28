@@ -1,0 +1,25 @@
+.buttons{
+    text-align: left;
+    padding-left: 5px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: auto;
+    background: rgb(13, 86, 104);
+}
+button{
+    font-size: 20px;
+    top: 12%;
+    margin-left: 5px;
+    
+}
+.view{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: 130px;
+    width: 90%;
+    color: aliceblue;
+    background: #000;
+}

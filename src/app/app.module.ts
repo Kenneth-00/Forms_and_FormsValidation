@@ -6,22 +6,31 @@ import { AppComponent } from './app.component';
 import { FormfieldComponent } from './formfield/formfield.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
   {
-    path :"formfield",
-    component: FormfieldComponent
+    path: "home",
+    component: HomeComponent,
+    children: [
+      {
+        path :"formfield",
+        component: FormfieldComponent
+      }
+    ],
   },
   {
-    path:"",
-    redirectTo: "formfield",
-    pathMatch:"full"
-  },
+    path: "**",
+    redirectTo: "home",
+    pathMatch: "full"
+  }
+  
 ]
 @NgModule({
   declarations: [
     AppComponent,
-    FormfieldComponent
+    FormfieldComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
